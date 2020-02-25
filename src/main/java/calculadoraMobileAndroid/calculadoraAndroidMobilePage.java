@@ -9,24 +9,25 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 	BaseTest test = new BaseTest();
 	BasePage page = new BasePage();
 	
-	private String btnZero = "com.android.calculator2:id/digit_0";
-	private String btnUm = "com.android.calculator2:id/digit_1";
-	private String btnDois = "com.android.calculator2:id/digit_2";
-	private String btnTres = "com.android.calculator2:id/digit_3";
-	private String btnQuatro = "com.android.calculator2:id/digit_4";
-	private String btnCinco = "com.android.calculator2:id/digit_5";
-	private String btnSeis = "com.android.calculator2:id/digit_6";
-	private String btnSete = "com.android.calculator2:id/digit_7";
-	private String btnOito = "com.android.calculator2:id/digit_8";
-	private String btnNove = "com.android.calculator2:id/digit_9";
+	private String btnZero = "com.google.android.calculator:id/digit_0";
+	private String btnUm = "com.google.android.calculator:id/digit_1";
+	private String btnDois = "com.google.android.calculator:id/digit_2";
+	private String btnTres = "com.google.android.calculator:id/digit_3";
+	private String btnQuatro = "com.google.android.calculator:id/digit_4";
+	private String btnCinco = "com.google.android.calculator:id/digit_5";
+	private String btnSeis = "com.google.android.calculator:id/digit_6";
+	private String btnSete = "com.google.android.calculator:id/digit_7";
+	private String btnOito = "com.google.android.calculator:id/digit_8";
+	private String btnNove = "com.google.android.calculator:id/digit_9";
 	private String btnDel = "com.android.calculator2:id/del";
-	private String btnDivisao = "com.android.calculator2:id/op_div";
-	private String btnMulti = "com.android.calculator2:id/op_mul";
-	private String btnSubtracao = "com.android.calculator2:id/op_sub";
-	private String btnSoma = "com.android.calculator2:id/op_add";
-	private String btnIgual = "com.android.calculator2:id/eq";
-	private String txtResultado = "com.android.calculator2:id/result";
-	private String btnLimpar = "com.android.calculator2:id/clr";
+	private String btnDivisao = "com.google.android.calculator:id/op_div";
+	private String btnMulti = "com.google.android.calculator:id/op_mul";
+	private String btnSubtracao = "com.google.android.calculator:id/op_sub";
+	private String btnSoma = "com.google.android.calculator:id/op_add";
+	private String btnIgual = "com.google.android.calculator:id/eq";
+	private String txtResultado = "com.google.android.calculator:id/result_final";
+	private String btnLimpar = "com.google.android.calculator:id/clr";
+	private String btnVotar = "com.google.android.calculator:id/del";
 	
 	public void soma() throws IOException, InterruptedException, InvalidFormatException {
 		test.criarPastaEvidencia("Calc Android - Soma");
@@ -44,7 +45,7 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Soma1");
-		page.validarTexto(By.id(txtResultado), "2.019");
+		page.validarTexto(By.id(txtResultado), "2019");
 		test.gerarScreenshots("Soma2");
 
 		page.esperar(1000);

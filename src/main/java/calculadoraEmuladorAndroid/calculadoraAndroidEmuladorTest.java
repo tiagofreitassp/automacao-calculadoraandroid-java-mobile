@@ -11,7 +11,7 @@ import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class calculadoraAndroidEmuladorTest extends BaseTest{
-	calculadoraAndroidMobilePage page = new calculadoraAndroidMobilePage();
+	calculadoraAndroidEmuladorPage page = new calculadoraAndroidEmuladorPage();
 	
 	@Before
 	public void inicializarDriver() throws MalformedURLException {
