@@ -25,9 +25,11 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 	private String btnSubtracao = "com.google.android.calculator:id/op_sub";
 	private String btnSoma = "com.google.android.calculator:id/op_add";
 	private String btnIgual = "com.google.android.calculator:id/eq";
-	private String txtResultado = "com.google.android.calculator:id/result_final";
 	private String btnLimpar = "com.google.android.calculator:id/clr";
 	private String btnVotar = "com.google.android.calculator:id/del";
+
+	private String txtResultado = "com.google.android.calculator:id/result_final";
+	private String txtImposDividirPorZero = "com.google.android.calculator:id/result_preview";
 	
 	public void soma() throws IOException, InterruptedException, InvalidFormatException {
 		test.criarPastaEvidencia("Calc Android - Soma");
@@ -106,14 +108,24 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		
 		page.clicar(By.id(btnDivisao));
 		
-		page.clicar(By.id(btnQuatro));
+		page.clicar(By.id(btnZero));
 		
 		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Divisão1");
-		page.validarTexto(By.id(txtResultado), "19");
+		page.validarTexto(By.id(txtImposDividirPorZero), "Impos. dividir por 0");
         test.gerarScreenshots("Divisão2");
-		
+
+        page.clicar(By.id(btnVotar));
+
+		page.clicar(By.id(btnQuatro));
+
+		page.clicar(By.id(btnIgual));
+
+		test.gerarScreenshots("Divisão3");
+		page.validarTexto(By.id(txtResultado), "19");
+		test.gerarScreenshots("Divisão4");
+
 		page.botaoHomeAndroid();
 
         page.esperar(1000);
