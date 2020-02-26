@@ -43,17 +43,16 @@ public class BaseTest extends MobileDriver{
     }
 
     public void gerarScreenshots(String nomeImagem) {
-        try {
+	    File pWin = new File(pastaEvidencias + "\\" + nomeImagem + ".png");
+	    File pMac = new File(pastaEvidencias+"/"+nomeImagem+".png");
+	    File evidencias = pWin;
 
+        try {
             TakesScreenshot ts = (TakesScreenshot)driver;
 
             File source = ts.getScreenshotAs(OutputType.FILE);
 
-            //Caminho no Windows
-            org.apache.commons.io.FileUtils.copyFile(source, new File(pastaEvidencias+"\\"+nomeImagem+".png"));
-
-            //Caminho no MacOS
-            //org.apache.commons.io.FileUtils.copyFile(source, new File(pastaEvidencias+"/"+nomeImagem+".png"));
+            org.apache.commons.io.FileUtils.copyFile(source, evidencias);
 
             System.out.println("Screenshot capturado de "+nomeImagem+"!");
         } catch (Exception e) {
@@ -85,10 +84,15 @@ public class BaseTest extends MobileDriver{
         String[] paths = pastaEvidencias.list();
 
         for (String path : paths) {
-            String imagem = pastaEvidencias + "\\" + path;//Caminho no Windows
-            //String imagem = pastaEvidencias + "/" + path;//Caminho no MacOS
+            String pWin = pastaEvidencias + "\\" + path;
+            String pMac = pastaEvidencias + "/" + path;
+            String evidencias = pWin;
+
+            String imagem = evidencias;
+
             FileInputStream is = new FileInputStream(imagem);
 
+            run3.addBreak();
             run3.addBreak();
             run3.setText(imagem);
             run3.setFontSize(11);
@@ -99,8 +103,11 @@ public class BaseTest extends MobileDriver{
             run3.addBreak();
             is.close();
 
-            String documento = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";//Caminho no Windows
-            //String documento = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";//Caminho no MacOS
+            String dWin = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";;
+            String dMac = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";
+            String pDocumento = dWin;
+
+            String documento = pDocumento;
             FileOutputStream fos = new FileOutputStream(documento);
             doc.write(fos);
             fos.close();
