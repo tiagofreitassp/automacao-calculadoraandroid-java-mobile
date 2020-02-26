@@ -1,4 +1,4 @@
-=== Automacao de cálculos na Calculadora do Android ===
+=== Automacao de calculos na Calculadora do Android ===
 
 0.Objetivo
  .Realizar calculos basicos na calculadora do Android no emulador
@@ -14,13 +14,11 @@
 2.Configuracoes:
  .O projeto foi criado no MacOS, porem foi testado tambem para executar no Windows. Ja esta configurado para
   executar no Windows.
- .Os scripts gherkin estao na pasta features
- .Classe para executar esta na pasta runner/RunnerTest
- .Os metodos para criar o driver Mobile estao na classe EmuladorDriver
+ .Os metodos para criar o driver Mobile estao na classe EmuladorDriver e MobileDriver
 
 3.Execucao:
- .Inserir as massas para teste no arquivo compras.feature na pasta features
- .Abrir a classe RunnerTest.java no Intellij Idea ou no Eclipse
+ .Abrir uma das classes ***Test.java no Intellij Idea ou no Eclipse
+ .No caso para executar num smartphone, abra a classe Mobile Driver e altere o valor no campo "DeviceId"
 
 4.Evidencias:
  .Apos a execucao as imagens de evidencias sao armazenadas na pasta screenshots.

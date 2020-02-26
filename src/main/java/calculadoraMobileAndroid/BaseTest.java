@@ -49,7 +49,11 @@ public class BaseTest extends MobileDriver{
 
             File source = ts.getScreenshotAs(OutputType.FILE);
 
+            //Caminho no Windows
             org.apache.commons.io.FileUtils.copyFile(source, new File(pastaEvidencias+"\\"+nomeImagem+".png"));
+
+            //Caminho no MacOS
+            //org.apache.commons.io.FileUtils.copyFile(source, new File(pastaEvidencias+"/"+nomeImagem+".png"));
 
             System.out.println("Screenshot capturado de "+nomeImagem+"!");
         } catch (Exception e) {
@@ -81,7 +85,8 @@ public class BaseTest extends MobileDriver{
         String[] paths = pastaEvidencias.list();
 
         for (String path : paths) {
-            String imagem = pastaEvidencias + "\\" + path;
+            String imagem = pastaEvidencias + "\\" + path;//Caminho no Windows
+            //String imagem = pastaEvidencias + "/" + path;//Caminho no MacOS
             FileInputStream is = new FileInputStream(imagem);
 
             run3.addBreak();
@@ -94,7 +99,8 @@ public class BaseTest extends MobileDriver{
             run3.addBreak();
             is.close();
 
-            String documento = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";
+            String documento = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";//Caminho no Windows
+            //String documento = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";//Caminho no MacOS
             FileOutputStream fos = new FileOutputStream(documento);
             doc.write(fos);
             fos.close();
