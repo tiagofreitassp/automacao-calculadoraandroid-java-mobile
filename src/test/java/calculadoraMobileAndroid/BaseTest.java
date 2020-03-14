@@ -45,7 +45,7 @@ public class BaseTest extends MobileDriver{
     public void gerarScreenshots(String nomeImagem) {
 	    File pWin = new File(pastaEvidencias + "\\" + nomeImagem + ".png");
 	    File pMac = new File(pastaEvidencias+"/"+nomeImagem+".png");
-	    File evidencias = pWin;
+	    File evidencias = pMac;
 
         try {
             TakesScreenshot ts = (TakesScreenshot)driver;
@@ -86,7 +86,7 @@ public class BaseTest extends MobileDriver{
         for (String path : paths) {
             String pWin = pastaEvidencias + "\\" + path;
             String pMac = pastaEvidencias + "/" + path;
-            String evidencias = pWin;
+            String evidencias = pMac;
 
             String imagem = evidencias;
 
@@ -105,7 +105,7 @@ public class BaseTest extends MobileDriver{
 
             String dWin = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";;
             String dMac = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";
-            String pDocumento = dWin;
+            String pDocumento = dMac;
 
             String documento = pDocumento;
             FileOutputStream fos = new FileOutputStream(documento);
