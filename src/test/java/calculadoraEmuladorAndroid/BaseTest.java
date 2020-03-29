@@ -23,7 +23,7 @@ public class BaseTest extends EmuladorDriver{
     private static String nomePasta;
     private File pastaEvidencias;
 
-	@After
+    @After
     public void tearDown() throws MalformedURLException {
         killDriver();
     }
@@ -43,13 +43,16 @@ public class BaseTest extends EmuladorDriver{
     }
 
     public void gerarScreenshots(String nomeImagem) {
-        try {
+        File pWin = new File(pastaEvidencias + "\\" + nomeImagem + ".png");
+        File pMac = new File(pastaEvidencias+"/"+nomeImagem+".png");
+        File evidencias = pMac;
 
+        try {
             TakesScreenshot ts = (TakesScreenshot)driver;
 
             File source = ts.getScreenshotAs(OutputType.FILE);
 
-            org.apache.commons.io.FileUtils.copyFile(source, new File(pastaEvidencias+"\\"+nomeImagem+".png"));
+            org.apache.commons.io.FileUtils.copyFile(source, evidencias);
 
             System.out.println("Screenshot capturado de "+nomeImagem+"!");
         } catch (Exception e) {
@@ -81,9 +84,15 @@ public class BaseTest extends EmuladorDriver{
         String[] paths = pastaEvidencias.list();
 
         for (String path : paths) {
-            String imagem = pastaEvidencias + "\\" + path;
+            String pWin = pastaEvidencias + "\\" + path;
+            String pMac = pastaEvidencias + "/" + path;
+            String evidencias = pMac;
+
+            String imagem = evidencias;
+
             FileInputStream is = new FileInputStream(imagem);
 
+            run3.addBreak();
             run3.addBreak();
             run3.setText(imagem);
             run3.setFontSize(11);
@@ -94,7 +103,11 @@ public class BaseTest extends EmuladorDriver{
             run3.addBreak();
             is.close();
 
-            String documento = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";
+            String dWin = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";;
+            String dMac = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";
+            String pDocumento = dMac;
+
+            String documento = pDocumento;
             FileOutputStream fos = new FileOutputStream(documento);
             doc.write(fos);
             fos.close();

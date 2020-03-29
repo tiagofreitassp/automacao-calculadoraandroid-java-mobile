@@ -93,7 +93,7 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Multiplicação1");
-		page.validarTexto(By.id(txtResultado), "615");
+		page.validarTexto(By.id(txtResultado), "115");
         test.gerarScreenshots("Multiplicação2");
 
         page.esperar(1000);
