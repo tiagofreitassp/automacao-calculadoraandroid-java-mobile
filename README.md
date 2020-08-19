@@ -17,6 +17,7 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 * [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
 * [jUnit](https://junit.org/junit5/)
 * [Apk Info](https://play.google.com/store/apps/details?id=com.wt.apkinfo&hl=pt_BR)
+* [Android Studio](https://developer.android.com/studio)
 
 ## Dependências:
 * Selenium-java
@@ -58,6 +59,8 @@ Para visualizar as evidencias no documento pode usar o MS Office Word ou o Libre
 
 ###  - Inicializar a automação
 *Descricao:
+
+Execute o Appium.
 
 Abrir uma das classes ***Test.java no Intellij Idea ou no Eclipse.
 
