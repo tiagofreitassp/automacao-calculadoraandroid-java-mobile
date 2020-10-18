@@ -52,7 +52,7 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 	}
 	
 	public void subtrair() throws IOException, InvalidFormatException, InterruptedException {
-        test.criarPastaEvidencia("Calc Android - Subtração");
+        test.criarPastaEvidencia("Calc Android - Subtracao");
 
 		page.clicar(By.id(btnDois));
 		page.clicar(By.id(btnZero));
@@ -68,16 +68,16 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		
 		page.clicar(By.id(btnIgual));
 
-		test.gerarScreenshots("Subtração1");
+		test.gerarScreenshots("Subtracao1");
 		page.validarTexto(By.id(txtResultado), "31");
-        test.gerarScreenshots("Subtração2");
+        test.gerarScreenshots("Subtracao2");
 
         page.esperar(1000);
-        test.gerarEvidenciaNoWord("Validar subtração","1","Realizar uma subtração");
+        test.gerarEvidenciaNoWord("Validar subtracao","1","Realizar uma subtracao");
 	}
 	
 	public void multiplicar() throws IOException, InterruptedException, InvalidFormatException {
-        test.criarPastaEvidencia("Calc Android - Multiplicação");
+        test.criarPastaEvidencia("Calc Android - Multiplicacao");
 
 		page.clicar(By.id(btnUm));
 		page.clicar(By.id(btnDois));
@@ -89,16 +89,16 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		
 		page.clicar(By.id(btnIgual));
 
-		test.gerarScreenshots("Multiplicação1");
+		test.gerarScreenshots("Multiplicacao1");
 		page.validarTexto(By.id(txtResultado), "615");
-        test.gerarScreenshots("Multiplicação2");
+        test.gerarScreenshots("Multiplicacao2");
 
         page.esperar(1000);
-        test.gerarEvidenciaNoWord("Validar multiplicação","1","Realizar uma multiplicação");
+        test.gerarEvidenciaNoWord("Validar multiplicacao","1","Realizar uma multiplicacao");
 	}
 	
 	public void divisao() throws IOException, InterruptedException, InvalidFormatException {
-        test.criarPastaEvidencia("Calc Android - Divisão");
+        test.criarPastaEvidencia("Calc Android - Divisao");
 
 		page.clicar(By.id(btnSete));
 		page.clicar(By.id(btnSeis));
@@ -109,13 +109,13 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		
 		page.clicar(By.id(btnIgual));
 
-		test.gerarScreenshots("Divisão1");
+		test.gerarScreenshots("Divisao1");
 		page.validarTexto(By.id(txtResultado), "19");
-        test.gerarScreenshots("Divisão2");
+        test.gerarScreenshots("Divisao2");
 		
 		page.botaoHomeAndroid();
 
         page.esperar(1000);
-        test.gerarEvidenciaNoWord("Validar divisão","1","Realizar uma divisão");
+        test.gerarEvidenciaNoWord("Validar divisao","1","Realizar uma divisao");
 	}
 }

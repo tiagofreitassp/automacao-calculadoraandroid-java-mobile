@@ -40,7 +40,7 @@ public class EmuladorDriver {
 	}
 	
 	public static void versaoApp() {
-        System.out.println("<<< Tiago Freitas - Versão: 1.1.230220 >>>");
-        System.out.println("<<< Versão da plataforma Android: 9.0(Pie) >>>");
+        System.out.println("<<< Tiago Freitas - Versao: 1.1.181020 >>>");
+        System.out.println("<<< Versao da plataforma Android: 9.0(Pie) >>>");
     }
 }

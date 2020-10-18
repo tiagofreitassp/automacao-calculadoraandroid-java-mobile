@@ -75,7 +75,7 @@ public class BaseTest extends EmuladorDriver{
 
         run2.addBreak();
         run2.addBreak();
-        run2.setText("3. EVIDÊNCIAS DOS CASOS DE TESTE");
+        run2.setText("3. EVIDENCIAS DOS CASOS DE TESTE");
         run2.setBold(true);
         run2.setFontSize(11);
         run2.setColor("595959");
