@@ -20,6 +20,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class BaseTest extends EmuladorDriver{
+    private BasePage page = new BasePage();
     private static String nomePasta;
     private File pastaEvidencias;
 
@@ -45,7 +46,21 @@ public class BaseTest extends EmuladorDriver{
     public void gerarScreenshots(String nomeImagem) {
         File pWin = new File(pastaEvidencias + "\\" + nomeImagem + ".png");
         File pMac = new File(pastaEvidencias+"/"+nomeImagem+".png");
-        File evidencias = pMac;
+        File evidencias = null;
+
+        if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac OS X")){
+            evidencias = pMac;
+        }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Unix")){
+            evidencias = pMac;
+        }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac")){
+            evidencias = pMac;
+        }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows")){
+            evidencias = pWin;
+        }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows 10")){
+            evidencias = pWin;
+        }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Win")){
+            evidencias = pWin;
+        }
 
         try {
             TakesScreenshot ts = (TakesScreenshot)driver;
@@ -86,7 +101,21 @@ public class BaseTest extends EmuladorDriver{
         for (String path : paths) {
             String pWin = pastaEvidencias + "\\" + path;
             String pMac = pastaEvidencias + "/" + path;
-            String evidencias = pMac;
+            String evidencias = null;
+
+            if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac OS X")){
+                evidencias = pMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Unix")){
+                evidencias = pMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac")){
+                evidencias = pMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows")){
+                evidencias = pWin;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows 10")){
+                evidencias = pWin;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Win")){
+                evidencias = pWin;
+            }
 
             String imagem = evidencias;
 
@@ -105,7 +134,21 @@ public class BaseTest extends EmuladorDriver{
 
             String dWin = pastaEvidencias + "\\" + "ID - " + id + " - " + titulo +".doc";;
             String dMac = pastaEvidencias + "/" + "ID - " + id + " - " + titulo +".doc";
-            String pDocumento = dMac;
+            String pDocumento = null;
+
+            if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac OS X")){
+                pDocumento = dMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Unix")){
+                pDocumento = dMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Mac")){
+                pDocumento = dMac;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows")){
+                pDocumento = dWin;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Windows 10")){
+                pDocumento = dWin;
+            }else if (page.obterNomeSistemaOperacional().equalsIgnoreCase("Win")){
+                pDocumento = dWin;
+            }
 
             String documento = pDocumento;
             FileOutputStream fos = new FileOutputStream(documento);
