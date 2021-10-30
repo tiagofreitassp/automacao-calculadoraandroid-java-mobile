@@ -9,13 +9,13 @@ Realizar calculos basicos na calculadora do Android no emulador.
 Realizar calculos basicos na calculadora do Android no smartphone.
 
 ## Tecnologias:
-* [Java Jdk 8](https://www.oracle.com/br/java/technologies/javase-downloads.html)
+* [Java JDK 8+](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 * [Maven](https://maven.apache.org)
 * [Maven dependencias](https://mvnrepository.com)
 * [Appium](http://appium.io)
 * [Selenium](https://www.selenium.dev/projects/)
 * [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
-* [jUnit](https://junit.org/junit5/)
+* [jUnit 4](https://junit.org/junit4/)
 * [Apk Info](https://play.google.com/store/apps/details?id=com.wt.apkinfo&hl=pt_BR)
 * [Android Studio](https://developer.android.com/studio)
 
