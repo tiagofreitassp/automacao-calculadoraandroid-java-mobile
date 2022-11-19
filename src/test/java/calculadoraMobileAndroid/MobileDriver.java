@@ -1,6 +1,5 @@
 package calculadoraMobileAndroid;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -9,9 +8,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class MobileDriver {
-    protected static AndroidDriver<MobileElement> driver;
+    protected static AndroidDriver driver;
 
-    public AndroidDriver<MobileElement> getDriver() throws MalformedURLException {
+    public AndroidDriver getDriver() throws MalformedURLException {
         if(driver == null) {
             criarDriverSmartphone();
         }

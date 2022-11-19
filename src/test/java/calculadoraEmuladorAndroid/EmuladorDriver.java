@@ -4,15 +4,14 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class EmuladorDriver {
-	protected static AndroidDriver<MobileElement>driver;
+	protected static AndroidDriver driver;
 	
-	public AndroidDriver<MobileElement> getDriver() throws MalformedURLException {
+	public AndroidDriver getDriver() throws MalformedURLException {
 		if(driver == null) {
 			criarDriverEmulador();
 		}
@@ -28,7 +27,7 @@ public class EmuladorDriver {
 	    desiredCapabilities.setCapability("appPackage", "com.android.calculator2");
         desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
 	    
-		driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+		driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(15));
 	}
 	

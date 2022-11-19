@@ -5,14 +5,12 @@ import java.net.MalformedURLException;
 import java.net.UnknownHostException;
 import java.time.Duration;
 
+import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import io.appium.java_client.android.AndroidKeyCode;
 
 public class BasePage extends EmuladorDriver{
 	public WebDriverWait wait;
@@ -38,11 +36,11 @@ public class BasePage extends EmuladorDriver{
     }
 	
 	public void botaoVoltarAndroid() throws MalformedURLException, InterruptedException {
-        getDriver().pressKeyCode(AndroidKeyCode.BACK);
+        getDriver().pressKey(new KeyEvent(AndroidKey.BACK));
     }
 
     public void botaoHomeAndroid() throws InterruptedException, MalformedURLException {
-        getDriver().pressKeyCode(AndroidKeyCode.HOME);
+        getDriver().pressKey(new KeyEvent(AndroidKey.HOME));
     }
 
     public void esperar(long temp) throws InterruptedException {
@@ -51,6 +49,7 @@ public class BasePage extends EmuladorDriver{
 
     public String obterNomeSistemaOperacional(){
         String so = System.getProperty("os.name");
+        System.out.println("Sistema Operacional: "+so+"!");
         return so;
     }
 

@@ -3,7 +3,8 @@ package calculadoraMobileAndroid;
 import java.net.MalformedURLException;
 import java.time.Duration;
 
-import io.appium.java_client.android.AndroidKeyCode;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -33,11 +34,11 @@ public class BasePage extends MobileDriver{
     }
 
     public void botaoVoltarAndroid() throws MalformedURLException, InterruptedException {
-        getDriver().pressKeyCode(AndroidKeyCode.BACK);
+        getDriver().pressKey(new KeyEvent(AndroidKey.BACK));
     }
 
     public void botaoHomeAndroid() throws InterruptedException, MalformedURLException {
-        getDriver().pressKeyCode(AndroidKeyCode.HOME);
+        getDriver().pressKey(new KeyEvent(AndroidKey.HOME));
     }
 
     public void esperar(long temp) throws InterruptedException {
