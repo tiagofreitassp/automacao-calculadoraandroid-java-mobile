@@ -1,6 +1,7 @@
 package calculadoraMobileAndroid;
 
 import java.net.MalformedURLException;
+import java.time.Duration;
 
 import io.appium.java_client.android.AndroidKeyCode;
 import org.junit.Assert;
@@ -27,7 +28,7 @@ public class BasePage extends MobileDriver{
     }
 
     public void aguardarElemento(By by) {
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofMillis(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 

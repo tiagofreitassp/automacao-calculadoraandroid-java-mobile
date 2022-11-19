@@ -3,9 +3,12 @@ package calculadoraEmuladorAndroid;
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.UnknownHostException;
+import java.time.Duration;
 
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -30,7 +33,7 @@ public class BasePage extends EmuladorDriver{
     }
 	
 	public void aguardarElemento(By by) {
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofMillis(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 	

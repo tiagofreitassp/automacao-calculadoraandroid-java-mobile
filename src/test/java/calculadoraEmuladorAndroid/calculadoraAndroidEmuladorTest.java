@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
