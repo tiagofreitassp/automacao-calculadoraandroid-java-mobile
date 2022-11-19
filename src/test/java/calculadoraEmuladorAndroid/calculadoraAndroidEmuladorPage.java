@@ -40,10 +40,10 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		
 		page.clicar(By.id(btnTres));
 		page.clicar(By.id(btnUm));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Soma1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "2.019");
 		test.gerarScreenshots("Soma2");
 
@@ -65,10 +65,10 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		page.clicar(By.id(btnNove));
 		page.clicar(By.id(btnOito));
 		page.clicar(By.id(btnOito));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Subtracao1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "31");
         test.gerarScreenshots("Subtracao2");
 
@@ -86,10 +86,10 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		page.clicar(By.id(btnMulti));
 		
 		page.clicar(By.id(btnCinco));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Multiplicacao1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "615");
         test.gerarScreenshots("Multiplicacao2");
 
@@ -106,10 +106,10 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		page.clicar(By.id(btnDivisao));
 		
 		page.clicar(By.id(btnQuatro));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Divisao1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "19");
         test.gerarScreenshots("Divisao2");
 		

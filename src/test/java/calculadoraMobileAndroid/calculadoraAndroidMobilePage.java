@@ -43,10 +43,10 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		
 		page.clicar(By.id(btnTres));
 		page.clicar(By.id(btnUm));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Soma1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "2019");
 		test.gerarScreenshots("Soma2");
 
@@ -68,10 +68,10 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		page.clicar(By.id(btnNove));
 		page.clicar(By.id(btnOito));
 		page.clicar(By.id(btnOito));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Subtração1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtResultado), "31");
         test.gerarScreenshots("Subtração2");
 
@@ -89,11 +89,11 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		page.clicar(By.id(btnMulti));
 		
 		page.clicar(By.id(btnCinco));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Multiplicação1");
-		page.validarTexto(By.id(txtResultado), "115");
+		page.clicar(By.id(btnIgual));
+
+		page.validarTexto(By.id(txtResultado), "615");
         test.gerarScreenshots("Multiplicação2");
 
         page.esperar(1000);
@@ -109,10 +109,10 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 		page.clicar(By.id(btnDivisao));
 		
 		page.clicar(By.id(btnZero));
-		
-		page.clicar(By.id(btnIgual));
 
 		test.gerarScreenshots("Divisão1");
+		page.clicar(By.id(btnIgual));
+
 		page.validarTexto(By.id(txtImposDividirPorZero), "Impos. dividir por 0");
         test.gerarScreenshots("Divisão2");
 
@@ -120,9 +120,9 @@ public class calculadoraAndroidMobilePage extends MobileDriver{
 
 		page.clicar(By.id(btnQuatro));
 
+		test.gerarScreenshots("Divisão3");
 		page.clicar(By.id(btnIgual));
 
-		test.gerarScreenshots("Divisão3");
 		page.validarTexto(By.id(txtResultado), "19");
 		test.gerarScreenshots("Divisão4");
 
