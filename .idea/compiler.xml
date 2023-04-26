@@ -9,8 +9,5 @@
         <module name="automacao-calculadoraandroid-java-mobile" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="automacao-calculadoraandroid-java-mobile" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
