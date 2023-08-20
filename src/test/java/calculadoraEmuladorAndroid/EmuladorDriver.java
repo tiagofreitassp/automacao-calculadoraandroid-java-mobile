@@ -26,8 +26,8 @@ public class EmuladorDriver {
 	    desiredCapabilities.setCapability("automationName", "uiautomator2");
 	    desiredCapabilities.setCapability("appPackage", "com.android.calculator2");
         desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
-	    
-		driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+
+		driver = new AndroidDriver(new URL("http://localhost:4723/"), desiredCapabilities);
 		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(15));
 	}
 	
@@ -38,7 +38,7 @@ public class EmuladorDriver {
 	}
 	
 	public static void versaoApp() {
-        System.out.println("<<< Tiago Freitas - Versao: 1.1.181020 >>>");
+        System.out.println("<<< Tiago Freitas - Versao: 1.1.200823 >>>");
         System.out.println("<<< Versao da plataforma Android: 9.0(Pie) >>>");
     }
 }

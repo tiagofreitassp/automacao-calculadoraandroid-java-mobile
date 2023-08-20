@@ -29,7 +29,7 @@ public class MobileDriver {
 		desiredCapabilities.setCapability("automationName", "UiAutomator2");
 		//desiredCapabilities.setCapability(MobileCapabilityType.APP, driverApp);
 
-		URL remoteUrl = new URL("http://localhost:4723/wd/hub");
+		URL remoteUrl = new URL("http://localhost:4723/");
 
 		driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 	}
@@ -41,7 +41,7 @@ public class MobileDriver {
     }
 
     public static void versaoApp() {
-        System.out.println("<<< Tiago Freitas - Versao: 1.0.250220 >>>");
+        System.out.println("<<< Tiago Freitas - Versao: 1.0.200823 >>>");
         System.out.println("<<< Versao da plataforma Android: 9.0(Pie) >>>");
     }
 }

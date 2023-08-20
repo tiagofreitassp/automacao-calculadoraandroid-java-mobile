@@ -12,7 +12,7 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 * [Java JDK 8+](https://www.oracle.com/br/java/technologies/javase-downloads.html)
 * [Maven](https://maven.apache.org)
 * [Maven dependencias](https://mvnrepository.com)
-* [Appium](http://appium.io)
+* [Appium 2.0+](http://appium.io)
 * [Selenium](https://www.selenium.dev/projects/)
 * [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
 * [jUnit 4](https://junit.org/junit4/)
@@ -36,6 +36,8 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 Nao e necessario fazer o download da calculadora, ela ja vem por padrao, apesar que dependera de qual versao do Android voce ira testar, pois ha versoes que nao vem a calculadora.
 
 Eu recomendo usar o Apk Info para verificar as informacoes do "appPackage" e "appActivity" para inserir no metodo de capabilities. Nao tem problema em usar outro.
+
+Utilize a versão 2 do Appim, pois as anteriores foram depreciadas e não possuem suporte do Desenvolvedor.
 
 ###  - Plataforma
 *Importante:
