@@ -37,7 +37,7 @@ Nao e necessario fazer o download da calculadora, ela ja vem por padrao, apesar 
 
 Eu recomendo usar o Apk Info para verificar as informacoes do "appPackage" e "appActivity" para inserir no metodo de capabilities. Nao tem problema em usar outro.
 
-Utilize a versão 2 do Appim, pois as anteriores foram depreciadas e não possuem suporte do Desenvolvedor.
+Utilize a versão 2 do Appium, pois as anteriores foram depreciadas e não possuem suporte do Desenvolvedor.
 
 ###  - Plataforma
 *Importante:
