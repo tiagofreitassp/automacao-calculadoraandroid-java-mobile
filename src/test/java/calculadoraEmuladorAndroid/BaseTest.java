@@ -26,11 +26,6 @@ public class BaseTest extends EmuladorDriver {
     private static String nomePasta;
     private File pastaEvidencias;
 
-    @After
-    public void tearDown() throws MalformedURLException {
-        killDriver();
-    }
-
     @AfterClass
     public static void versionApp() throws MalformedURLException {
         versaoApp();
