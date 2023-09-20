@@ -3,4 +3,6 @@
 /workspace.xml
 .DS_Store
 /DS_Store
-
+/.screenshots/.DS_Store
+.screenshots/.DS_Store
+screenshots/.DS_Store
