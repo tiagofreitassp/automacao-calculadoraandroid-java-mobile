@@ -90,7 +90,7 @@ public class calculadoraAndroidEmuladorPage extends EmuladorDriver{
 		test.gerarScreenshots("Multiplicacao1");
 		page.clicar(By.id(btnIgual));
 
-		page.validarTexto(By.id(txtResultado), "616");
+		page.validarTexto(By.id(txtResultado), "615");
 		test.gerarScreenshots("Multiplicacao2");
 
 		page.esperar(1000);

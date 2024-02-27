@@ -36,7 +36,7 @@ public class BaseTest extends EmuladorDriver {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
         nomePasta = sdf.format(dataAtual);
 
-        pastaEvidencias = new File("./screenshots/" + nPasta + " " + nomePasta);
+        pastaEvidencias = new File("./evidencias/" + nPasta + " " + nomePasta);
         pastaEvidencias.mkdir();
     }
 
