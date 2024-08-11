@@ -15,13 +15,13 @@ Realizar calculos basicos na calculadora do Android no smartphone.
 * [Appium 2.0+](http://appium.io)
 * [Selenium](https://www.selenium.dev/projects/)
 * [Intellij Idea](https://www.jetbrains.com/pt-br/idea/)
-* [jUnit 4](https://junit.org/junit4/)
+* [jUnit 5](https://junit.org/junit5/)
 * [Apk Info](https://play.google.com/store/apps/details?id=com.wt.apkinfo&hl=pt_BR)
 * [Android Studio](https://developer.android.com/studio)
 
 ## Dependências:
 * Selenium-java
-* jUnit 4
+* jUnit 5
 * Commons-io
 * Cucumber-junit
 * Cucumber-java
